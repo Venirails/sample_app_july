@@ -1,0 +1,23 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @company.name %>
+</p>
+
+<p>
+  <strong>Year:</strong>
+  <%= @company.year %>
+</p>
+
+Employees are<br />
+
+<% @company.emps.each do |e|%>
+
+Name : <%= e.name %><br />
+Age : <%= e.age %><br />
+
+Age : <% end %>
+
+<%= link_to 'Edit', edit_company_path(@company) %> |
+<%= link_to 'Back', companies_path %>
